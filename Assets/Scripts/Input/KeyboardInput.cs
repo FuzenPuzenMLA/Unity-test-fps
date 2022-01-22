@@ -6,7 +6,7 @@ public class KeyboardInput : InGameInputs
 
     internal override void ChangeWeapon(int weaponNumber)
     {
-        weaponList.SetCurrentWeapon(weaponNumber);
+        if(weaponNumber < weaponList.GetWeponsCount()) weaponList.SetCurrentWeapon(weaponNumber);
     }
 
     private void Start()

@@ -57,7 +57,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710784338146882682}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.43, y: 0.34599996, z: 1.78}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
@@ -80,7 +80,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710784338146882682}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -139,11 +139,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4353eaa2f079f4d9ed1af4df8db6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpawnPoint: {fileID: 710784336788971117}
+  BulletSpawnPointList:
+  - {fileID: 710784336788971117}
   BulletPB: {fileID: 3785623686851370279, guid: 90ef8805d7ef760468f503a837f4de49, type: 3}
   Damage: 5
   FireRate: 1
-  MaxShootDistance: 1
-  Spread: 0.2
-  ReloadTime: 1
-  Clip: 0
+  MaxShootDistance: 10
+  Spread: 0.05
+  ReloadTime: 0.5
+  Clip: 6
+  bulletsInClip: 0
+  canFire: 0

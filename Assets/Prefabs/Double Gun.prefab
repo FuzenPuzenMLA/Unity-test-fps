@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6853332645462474217
+--- !u!1 &2823793946484681749
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,79 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6853332645462474002}
-  - component: {fileID: 6853332645462474005}
-  - component: {fileID: 6853332645462474004}
-  - component: {fileID: 6853332645462474007}
-  - component: {fileID: 2084196456922038846}
+  - component: {fileID: 8716951869599460762}
   m_Layer: 0
-  m_Name: Rifle
+  m_Name: Bullet Spawn Point (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6853332645462474002
+--- !u!4 &8716951869599460762
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853332645462474217}
+  m_GameObject: {fileID: 2823793946484681749}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0.6}
+  m_LocalScale: {x: 3.333333, y: 3.333333, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7618936978456945530}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7618936978456945537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7618936978456945530}
+  - component: {fileID: 7618936978456945533}
+  - component: {fileID: 7618936978456945532}
+  - component: {fileID: 7618936978456945535}
+  - component: {fileID: 8379176388033933108}
+  m_Layer: 0
+  m_Name: Double Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7618936978456945530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618936978456945537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.43, y: 0.34599996, z: 1.78}
+  m_LocalPosition: {x: -0.87, y: -0.65400004, z: 2.637}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 6853332646822467582}
+  - {fileID: 7618936979783387542}
+  - {fileID: 8716951869599460762}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6853332645462474005
+--- !u!33 &7618936978456945533
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853332645462474217}
+  m_GameObject: {fileID: 7618936978456945537}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6853332645462474004
+--- !u!23 &7618936978456945532
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853332645462474217}
+  m_GameObject: {fileID: 7618936978456945537}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63f2c8c5ebcab0c48824d7fb66fe5a09, type: 2}
+  - {fileID: 2100000, guid: ad0f0088bc273cc4991f4c0588885bd6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,43 +115,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6853332645462474007
+--- !u!65 &7618936978456945535
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853332645462474217}
+  m_GameObject: {fileID: 7618936978456945537}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2084196456922038846
+--- !u!114 &8379176388033933108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853332645462474217}
+  m_GameObject: {fileID: 7618936978456945537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950d5863b8a318f4ba4d4c0e1c391761, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c10da038c021b941860b1b76fa02827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpawnPointList:
-  - {fileID: 6853332646822467582}
+  - {fileID: 7618936979783387542}
+  - {fileID: 8716951869599460762}
   BulletPB: {fileID: 3785623686851370279, guid: 90ef8805d7ef760468f503a837f4de49, type: 3}
-  Damage: 2
-  FireRate: 0.2
-  MaxShootDistance: 15
-  Spread: 0.1
-  ReloadTime: 2
-  Clip: 10
+  Damage: 20
+  FireRate: 1
+  MaxShootDistance: 20
+  Spread: 0
+  ReloadTime: 3
+  Clip: 4
   bulletsInClip: 0
   canFire: 0
---- !u!1 &6853332646822467569
+--- !u!1 &7618936979783387545
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +160,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6853332646822467582}
+  - component: {fileID: 7618936979783387542}
   m_Layer: 0
   m_Name: Bullet Spawn Point
   m_TagString: Untagged
@@ -136,17 +168,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6853332646822467582
+--- !u!4 &7618936979783387542
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6853332646822467569}
+  m_GameObject: {fileID: 7618936979783387545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.6}
+  m_LocalPosition: {x: -0.74, y: 0, z: 0.6}
   m_LocalScale: {x: 3.333333, y: 3.333333, z: 1}
   m_Children: []
-  m_Father: {fileID: 6853332645462474002}
+  m_Father: {fileID: 7618936978456945530}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

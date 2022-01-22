@@ -1,17 +1,23 @@
+using System.Collections;
 using UnityEngine;
 
 public class Pistol : Weapon
 {
-    
+
     void Start()
     {
-        Shoot();
+        
     }
 
-    public override void Reload()
+    internal override void Reload()
     {
-        throw new System.NotImplementedException();
+        StartCoroutine(WaitReloadTime());
     }
 
- 
+    private IEnumerator WaitReloadTime()
+    {
+        yield return new WaitForSeconds(ReloadTime);
+        bulletsInClip++;
+        if (bulletsInClip != Clip) { Reload(); } else { canFire = true; }
+    }
 }

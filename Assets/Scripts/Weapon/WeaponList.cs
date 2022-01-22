@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,5 +14,10 @@ public class WeaponList : MonoBehaviour
     internal virtual Weapon GetCurrentWeapon()
     {
         return currentWeapon;
+    }
+
+    internal int GetWeponsCount()
+    {
+        return weaponList.Count;
     }
 }

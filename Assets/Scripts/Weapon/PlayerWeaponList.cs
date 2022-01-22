@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class PlayerWeaponList : WeaponList
 {
     public delegate void WeaponChange();
     public WeaponChange weaponChange;
-    [SerializeField] internal List<GameObject> weaponListObj;
+    [SerializeField] internal List<MeshRenderer> weaponListMesh;
 
 
     internal void Init (WeaponChange weaponChange)
@@ -16,17 +15,17 @@ public class PlayerWeaponList : WeaponList
 
     internal override void SetCurrentWeapon(int weaponNumber)
     {
+        HideWeapons();
         currentWeapon = weaponList[weaponNumber];
+        weaponListMesh[weaponNumber].enabled = true;
         weaponChange?.Invoke();
     }
 
-    void Start()
+    private void HideWeapons()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        foreach (MeshRenderer weapon in weaponListMesh)
+        {
+            weapon.enabled = false;
+        }
     }
 }
