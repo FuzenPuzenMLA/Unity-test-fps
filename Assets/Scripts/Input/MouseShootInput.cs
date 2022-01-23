@@ -4,11 +4,6 @@ public class MouseShootInput : ShootInput
 {
     shootInput ShootInput;
 
-    void Start()
-    {
-        
-    }
-
     internal override void Init(shootInput ShootInput)
     {
         this.ShootInput = ShootInput;

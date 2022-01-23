@@ -8,7 +8,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] private protected GameObject BulletPB;
 
     [SerializeField] private protected int Damage;
-    [SerializeField] private protected float FireRate;
+    [SerializeField] internal float FireRate;
     [SerializeField] private protected float MaxShootDistance;
     [SerializeField] private protected float Spread;
     [SerializeField] private protected float ReloadTime;
@@ -16,7 +16,7 @@ public abstract class Weapon : MonoBehaviour
 
     [SerializeField] private protected int bulletsInClip;
     private Vector3 bulletDirection;
-    [SerializeField] private protected bool canFire;
+    private protected bool canFire;
 
     private GameObject bullet;
 
@@ -30,6 +30,7 @@ public abstract class Weapon : MonoBehaviour
     {
         if (canFire)
         {
+            // - Огонь из всех стволов!)
             for (int i = 0; i < BulletSpawnPointList.Count; i++)
             {
                 bullet = Instantiate(BulletPB, BulletSpawnPointList[i].position, Quaternion.identity);
@@ -48,7 +49,7 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-
+    // передаём начальные значения для пули
     internal virtual void SetValueToBullet(Transform BulletSpawnPoint)
     {
         float xSpread = Random.Range(-Spread, Spread);

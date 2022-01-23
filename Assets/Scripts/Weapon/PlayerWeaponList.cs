@@ -5,7 +5,7 @@ public class PlayerWeaponList : WeaponList
 {
     public delegate void WeaponChange();
     public WeaponChange weaponChange;
-    [SerializeField] internal List<MeshRenderer> weaponListMesh;
+    [SerializeField] private List<MeshRenderer> weaponListMesh;
 
 
     internal void Init (WeaponChange weaponChange)

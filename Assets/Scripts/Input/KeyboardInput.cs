@@ -6,6 +6,7 @@ public class KeyboardInput : InGameInputs
 
     internal override void ChangeWeapon(int weaponNumber)
     {
+        // небольшая проверка на вылет из списка оружия
         if(weaponNumber < weaponList.GetWeponsCount()) weaponList.SetCurrentWeapon(weaponNumber);
     }
 
@@ -14,7 +15,7 @@ public class KeyboardInput : InGameInputs
         ChangeWeapon(0);
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKey(KeyCode.Alpha1))
         {

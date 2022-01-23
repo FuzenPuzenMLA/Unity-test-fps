@@ -3,12 +3,6 @@ using UnityEngine;
 
 public class Pistol : Weapon
 {
-
-    void Start()
-    {
-        
-    }
-
     internal override void Reload()
     {
         StartCoroutine(WaitReloadTime());

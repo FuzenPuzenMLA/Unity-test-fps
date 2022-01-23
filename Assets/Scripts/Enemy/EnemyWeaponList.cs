@@ -1,18 +1,22 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyWeaponList : WeaponList
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<MeshRenderer> weaponListMesh;
+
+    internal override void SetCurrentWeapon(int weaponNumber)
     {
-        
+        HideWeapons();
+        currentWeapon = weaponList[weaponNumber];
+        weaponListMesh[weaponNumber].enabled = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HideWeapons()
     {
-        
+        foreach (MeshRenderer weapon in weaponListMesh)
+        {
+            weapon.enabled = false;
+        }
     }
 }

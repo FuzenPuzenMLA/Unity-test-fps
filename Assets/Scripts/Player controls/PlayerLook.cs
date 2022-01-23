@@ -26,7 +26,7 @@ public class PlayerLook : MonoBehaviour
     {
         xRotation += _lookDirection.x;
         yRotation += _lookDirection.y;
-        yRotation = Mathf.Clamp(yRotation, minViewAngleY, maxViewAngleY);
+        yRotation = Mathf.Clamp(yRotation, minViewAngleY, maxViewAngleY); // ограничение для поворота камеры
         PlayerCameraRotate(xRotation, yRotation);
     }
 

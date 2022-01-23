@@ -15,13 +15,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void PlayerMove(Vector3 _direction)
+    internal void PlayerMove(Vector3 _direction)
     {
         characterController.Move(_direction * speed);
     }
 
 
-    void Update()
+    private void Update()
     {
         PlayerMove(moveInput.GetVectorDir());
     }

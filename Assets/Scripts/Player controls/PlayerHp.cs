@@ -11,6 +11,7 @@ public class PlayerHp : HpHolders
         RegenHp();
     }
 
+    // так же можно резать входящий урон бронёй здесь
     internal override void TakeDamage(int _damage)
     {
         CurrentHp -= _damage;
@@ -18,6 +19,7 @@ public class PlayerHp : HpHolders
         RegenHp();
     }
 
+    // добавим немного регенерации Hp игроку
     public void RegenHp()
     {
         if (CurrentHp < maxHp)
